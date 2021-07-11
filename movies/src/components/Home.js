@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 
 
 
@@ -9,6 +9,8 @@ import {POSTER_SIZE, BACKDROP_SIZE, IMAGE_BASE_URL} from "../config";
 import CoverImage from "./CoverImage"
 import Grid from "./Grid"
 import Thumbnail from "./Thumbnail"
+import Spinner from "./Spinner"
+import SearchBar from "./SearchBar"
 
 //Hook
 import { useHomeFetch } from "../hooks/useHomeFetch";
@@ -20,7 +22,7 @@ import NoImage from "../images/no_image.jpg";
 
 
 const Home = () => {
-    const {state, loading, error } = useHomeFetch();
+    const {state, loading, error, setSearchTerm} = useHomeFetch();
     console.log(state.results[0]);
     return (
         <>
@@ -31,6 +33,9 @@ const Home = () => {
                 text={state.results[0].overview}
             />
             ) : null}
+
+            <SearchBar setSearchTerm= {setSearchTerm} />
+
             <Grid header= "Popular Movies">
                 {state.results.map(movie => (
                     <Thumbnail 
@@ -43,8 +48,7 @@ const Home = () => {
                     />
                 ))}
             </Grid>    
-      
-      
+            <Spinner />
       </>
     );
 }
