@@ -9,7 +9,7 @@ export const useMovieFetch = (movieId) => {
     useEffect(() => {
         const fetchMovie = async () => {
             try {
-                setLoading(true);
+                setLoading(false);
                 setError(false);
 
                 const movie = await API.fetchMovie(movieId);
