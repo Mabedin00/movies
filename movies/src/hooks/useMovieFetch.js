@@ -9,7 +9,7 @@ export const useMovieFetch = (movieId) => {
     useEffect(() => {
         const fetchMovie = async () => {
             try {
-                setLoading(false);
+                setLoading(true);
                 setError(false);
 
                 const movie = await API.fetchMovie(movieId);
@@ -25,6 +25,7 @@ export const useMovieFetch = (movieId) => {
                     actors: credits.cast,
                     directors,
                 });
+                setLoading(false);
             } catch (error) {
                 setError(true);
             }
