@@ -29,7 +29,7 @@ const Movie = () => {
     console.log(IMAGE_BASE_URL+POSTER_SIZE+movie.actors[0].profile_path)
     return (
         <>
-            <BreadCrumb movieTitle={movie.original_title} />
+            <BreadCrumb title={movie.original_title} />
             <MovieInfo movie={movie} />
             <MovieInfoBar
                 time={movie.runtime}
@@ -47,6 +47,8 @@ const Movie = () => {
                                 ? `${IMAGE_BASE_URL}${POSTER_SIZE}${actor.profile_path}`
                                 : NoActor
                         }
+                        clickable
+                        personId = {actor.id}
                     />
                 ))}
             </Grid>

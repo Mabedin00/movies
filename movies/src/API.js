@@ -30,6 +30,17 @@ const apiSettings = {
         const creditsEndpoint = `${API_URL}movie/${movieId}/credits?api_key=${API_KEY}`;
         return await (await fetch(creditsEndpoint)).json();
     },
+    fetchActorDetails: async (personId) => {
+        const detailsEndpoint = `${API_URL}person/${personId}?api_key=${API_KEY}`;
+        return await (await fetch(detailsEndpoint)).json();
+    },
+    fetchActorCredits: async (personId) => {
+        const creditsEndpoint = `${API_URL}movie/${personId}/movie_credits?api_key=${API_KEY}`;
+        return await (await fetch(creditsEndpoint)).json();
+    },
+
+
+
     // Bonus material below for login
     getRequestToken: async () => {
         const reqToken = await (await fetch(REQUEST_TOKEN_URL)).json();

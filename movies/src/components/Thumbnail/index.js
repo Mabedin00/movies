@@ -7,7 +7,7 @@ import { Image } from "./Thumbnail.styles";
 const Thumbnail = ({ image, movieId, clickable }) => (
     <div>
         {clickable ? (
-            <Link to={`/${movieId}`}>
+            <Link to={`/movie/${movieId}`}>
                 <Image src={image} alt="movie-thumbnail" />
             </Link>
         ) : (
