@@ -35,7 +35,7 @@ const apiSettings = {
         return await (await fetch(detailsEndpoint)).json();
     },
     fetchActorCredits: async (personId) => {
-        const creditsEndpoint = `${API_URL}movie/${personId}/movie_credits?api_key=${API_KEY}`;
+        const creditsEndpoint = `${API_URL}person/${personId}/movie_credits?api_key=${API_KEY}`;
         return await (await fetch(creditsEndpoint)).json();
     },
 

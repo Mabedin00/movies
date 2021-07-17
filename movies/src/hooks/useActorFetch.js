@@ -14,7 +14,6 @@ export const useActorFetch = (personId) => {
 
                 const details = await API.fetchActorDetails(personId);
                 const credits = await API.fetchActorCredits(personId);
-
                 setState({
                     ...details,
                     ...credits

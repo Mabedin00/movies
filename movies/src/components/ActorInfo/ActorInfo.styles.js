@@ -1,10 +1,11 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.div`
-    background: black;
+    background: var(--darkGray);
     background-size: cover;
     background-position: center;
     padding: 40px 20px;
+    height: 700px;
     animation: animateActorInfo 1s;
 
     @keyframes animateActorInfo {
@@ -24,6 +25,7 @@ export const Content = styled.div`
     margin: 0 auto;
     background: rgba(0,0,0,.7);
     border-radius: 20px;
+    height: 100%;
 
 
     @media screen and (max-width: 768px){
@@ -40,10 +42,3 @@ export const Text = styled.div`
     overflow: hidden;
 `;
 
-export const Image = styled.div`
-    display: block;
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
-    border-radius: 15px;
-`;
