@@ -27,7 +27,7 @@ const Home = () => {
         setIsLoadingMore,
     } = useHomeFetch();
 
-    if (error) return <div>Something went wrong</div>
+    if (error) return <div>Something went wrong</div>;
 
     return (
         <>
@@ -43,26 +43,27 @@ const Home = () => {
 
             <Grid header={searchTerm ? "Search Result" : "Popular Movies"}>
                 {state.results.map((movie) => (
-                    <div>
-                        <Thumbnail
-                            key={movie.id}
-                            clickable
-                            image={
-                                movie.poster_path
-                                    ? IMAGE_BASE_URL +
-                                      POSTER_SIZE +
-                                      movie.poster_path
-                                    : NoImage
-                            }
-                            movieId={movie.id}
-                        />
-                        <h3> {movie.original_title} </h3>
-                    </div>
+                    <Thumbnail
+                        key={movie.id}
+                        clickable
+                        image={
+                            movie.poster_path
+                                ? IMAGE_BASE_URL +
+                                  POSTER_SIZE +
+                                  movie.poster_path
+                                : NoImage
+                        }
+                        movieId={movie.id}
+                        movieTitle={movie.original_title}
+                    />
                 ))}
             </Grid>
             {loading && <Spinner />}
             {state.page < state.total_pages && !loading && (
-                <Button text="Load More" callback = {() => setIsLoadingMore(true)   }/>
+                <Button
+                    text="Load More"
+                    callback={() => setIsLoadingMore(true)}
+                />
             )}
         </>
     );

@@ -2,10 +2,10 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 //Styles
-import { Image } from "./Thumbnail.styles";
+import { Wrapper, Image } from "./Thumbnail.styles";
 
-const Thumbnail = ({ image, movieId, clickable }) => (
-    <div>
+const Thumbnail = ({ image, movieId, clickable, movieTitle, character }) => (
+    <Wrapper>
         {clickable ? (
             <Link to={`/movie/${movieId}`}>
                 <Image src={image} alt="movie-thumbnail" />
@@ -13,7 +13,12 @@ const Thumbnail = ({ image, movieId, clickable }) => (
         ) : (
             <Image src={image} alt="movie-thumbnail" />
         )}
-    </div>
+        <h3> {movieTitle} </h3>
+        {character ? 
+            <p> {character} </p>
+            :   <></>}
+        
+    </Wrapper>
 );
 
 export default Thumbnail;
