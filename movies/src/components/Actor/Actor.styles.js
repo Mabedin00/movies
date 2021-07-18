@@ -26,6 +26,11 @@ export const Image = styled.img`
         cover
             ? `100%`
             : `300px`};
+
+    :hover {
+        opacity: ${({cover}) => cover ? 1 : .4};
+    }
+
     object-fit: cover;
     border-radius: 15px;
 `;

@@ -26,7 +26,7 @@ const Movie = () => {
     if (loading) return <Spinner />;
 
     if (error) return <div>Error</div>;
-    console.log(IMAGE_BASE_URL+POSTER_SIZE+movie.actors[0].profile_path)
+    // console.log(IMAGE_BASE_URL+POSTER_SIZE+movie.actors[0].profile_path)
     return (
         <>
             <BreadCrumb title={movie.original_title} />

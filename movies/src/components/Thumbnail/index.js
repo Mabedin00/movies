@@ -8,10 +8,10 @@ const Thumbnail = ({ image, movieId, clickable, movieTitle, character }) => (
     <Wrapper>
         {clickable ? (
             <Link to={`/movie/${movieId}`}>
-                <Image src={image} alt="movie-thumbnail" />
+                <Image clickable={clickable} src={image} alt="movie-thumbnail" />
             </Link>
         ) : (
-            <Image src={image} alt="movie-thumbnail" />
+            <Image clickable={clickable} src={image} alt="movie-thumbnail" />
         )}
         <h3> {movieTitle} </h3>
         {character ? 
