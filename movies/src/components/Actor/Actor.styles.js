@@ -6,7 +6,6 @@ export const Wrapper = styled.div`
     border-radius: 20px;
     padding: 5px;
     text-align: center;
-
     h3{
         margin: 10px 0 0 0;
 
@@ -23,9 +22,15 @@ export const Wrapper = styled.div`
 export const Image = styled.img`
     display: block;
     width: 100%;
-    height: 200px;
+    height: ${({ cover }) =>
+        cover
+            ? `100%`
+            : `300px`};
+
+    :hover {
+        opacity: ${({cover}) => cover ? 1 : .4};
+    }
+
     object-fit: cover;
     border-radius: 15px;
-
-
 `;

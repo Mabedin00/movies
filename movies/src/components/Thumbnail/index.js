@@ -2,18 +2,23 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 //Styles
-import { Image } from "./Thumbnail.styles";
+import { Wrapper, Image } from "./Thumbnail.styles";
 
-const Thumbnail = ({ image, movieId, clickable }) => (
-    <div>
+const Thumbnail = ({ image, movieId, clickable, movieTitle, character }) => (
+    <Wrapper>
         {clickable ? (
-            <Link to={`/${movieId}`}>
-                <Image src={image} alt="movie-thumbnail" />
+            <Link to={`/movie/${movieId}`}>
+                <Image clickable={clickable} src={image} alt="movie-thumbnail" />
             </Link>
         ) : (
-            <Image src={image} alt="movie-thumbnail" />
+            <Image clickable={clickable} src={image} alt="movie-thumbnail" />
         )}
-    </div>
+        <h3> {movieTitle} </h3>
+        {character ? 
+            <p> {character} </p>
+            :   <></>}
+        
+    </Wrapper>
 );
 
 export default Thumbnail;
