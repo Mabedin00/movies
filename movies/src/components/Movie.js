@@ -15,7 +15,6 @@ import Actor from "./Actor";
 import { useMovieFetch } from "../hooks/useMovieFetch";
 
 //Image
-import NoImage from "../images/no_image.jpg";
 import NoActor from "../images/no_actor.jpg";
 
 const Movie = () => {
