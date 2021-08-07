@@ -24,7 +24,7 @@ export const Image = styled.img`
     width: 100%;
     height: ${({ cover }) =>
         cover
-            ? `100%`
+            ? ``
             : `300px`};
 
     :hover {

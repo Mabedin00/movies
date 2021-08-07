@@ -38,17 +38,6 @@ export const Image = styled.img`
     }
 
 
-     /* ${ clickable  =>
-        clickable
-            ? `&:hover {
-                    opacity: .4;
-                }`
-            :`&:hover {
-                    opacity: 1;
-                }`}; */
-    /* :hover {
-        opacity:;
-    } */
 
 
     @keyframes animateThumbnail {

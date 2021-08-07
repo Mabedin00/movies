@@ -6,7 +6,7 @@ import { IMAGE_BASE_URL, POSTER_SIZE } from "../../config";
 //Image
 import NoActor from "../../images/no_actor.jpg";
 //Styles
-import { Wrapper, Content, Text, Image } from "./ActorInfo.styles";
+import { Wrapper, Content, Text } from "./ActorInfo.styles";
 
 const ActorInfo = ({ actor }) => (
     <Wrapper>

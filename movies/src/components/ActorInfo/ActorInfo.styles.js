@@ -5,7 +5,6 @@ export const Wrapper = styled.div`
     background-size: cover;
     background-position: center;
     padding: 40px 20px;
-    height: 700px;
     animation: animateActorInfo 1s;
 
     @keyframes animateActorInfo {
@@ -25,12 +24,12 @@ export const Content = styled.div`
     margin: 0 auto;
     background: rgba(0,0,0,.7);
     border-radius: 20px;
-    height: 100%;
 
 
     @media screen and (max-width: 768px){
         display: block;
         max-height: none;
+
     }
 
 `;
@@ -39,6 +38,9 @@ export const Text = styled.div`
     width: 100%;
     padding: 20px;
     color: var(--white);
-    overflow: hidden;
+    overflow: auto;
+    @media screen and (max-width: 768px){
+        font-size: var(--fontM);
+    }
 `;
 

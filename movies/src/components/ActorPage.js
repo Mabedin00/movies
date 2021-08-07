@@ -13,7 +13,6 @@ import Thumbnail from "./Thumbnail";
 import { useActorFetch } from "../hooks/useActorFetch";
 
 //Image
-import NoActor from "../images/no_actor.jpg";
 import NoImage from "../images/no_image.jpg";
 
 const ActorPage = () => {
@@ -24,8 +23,6 @@ const ActorPage = () => {
     if (loading) return <Spinner />;
 
     if (error) return <div> Error </div>;
-    console.log(actor);
-    console.log(actor.cast.length + actor.crew.length);
     return (
         <>
             <BreadCrumb title={actor.name} />

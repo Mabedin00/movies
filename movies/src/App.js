@@ -23,7 +23,6 @@ const App = () => (
             <Route path='/movie/:movieId' element = {<Movie />} />
             <Route path='/actor/:personId' element = {<Actor />} />
             <Route path='/*' element = {<NotFound />} />
-
         </Routes>
         <GlobalStyle />
     </Router>

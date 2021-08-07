@@ -28,7 +28,6 @@ const MovieInfo = ({ movie }) => (
                         <div className="score">{movie.vote_average}</div>
                     </div>
                     <div className="director">
-                        {console.log(movie.directors == undefined)}
                         <h3> Director{(movie.directors != undefined && movie.directors.length) > 1 ? 's' : '' } </h3>
                         { (movie.directors != undefined) ?
                             movie.directors.map(director => (
